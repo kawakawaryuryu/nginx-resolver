@@ -3,7 +3,7 @@ resolverパラメータ確認用
 
 ## 背景
 Nginxのデフォルト挙動はstart or relaod時にIPを保持してしまうため、proxy_pass等で設定されたドメインはずっと同じIPを向いてしまう。  
-そのためresolverとvalid(TTL)を設定することで回避する
+そのためresolverを設定することで回避する
 
 ## 確認方法
 access.logに$upstream_addrを付けたことでストリーム先のIPをはけるようになったのでそれで接続先を確認

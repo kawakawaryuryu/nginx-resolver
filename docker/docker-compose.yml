@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  nginx:
+    build:
+      context: .
+    image: kawakawaryuryu/nginx-resolver:0.0.1
+    container_name: nginx-resolver
+    ports:
+      - "8000:80"
