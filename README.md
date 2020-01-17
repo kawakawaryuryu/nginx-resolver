@@ -8,5 +8,28 @@ Nginxのデフォルト挙動はstart or relaod時にIPを保持してしまう�
 ## 確認方法
 access.logに$upstream_addrを付けたことでストリーム先のIPをはけるようになったのでそれで接続先を確認
 
-## 修正
-Qiita
+## 確認環境
+### Docker
+```bash
+cd docker
+
+# ビルド&起動
+docker-compose up -d --build
+```
+
+### Vagrant
+```bash
+cd vagrant
+
+# 起動
+vagrant up
+
+# nginx.confをVMにコピー
+scp nginx.conf <VMのIP>:/etc/nginx/
+
+# ssh
+vagrant ssh
+```
+
+## 参考
+[Qiita](https://qiita.com/kawakawaryuryu/items/af5dcb59aea1a10e4939)を書くのに確認した
